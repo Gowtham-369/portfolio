@@ -1,0 +1,145 @@
+/* Existing Styles */
+
+.contact-container {
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  min-height: 100vh;
+}
+
+.contact-header {
+  display: flex;
+  align-items: center; /* Ensure vertical alignment is centered */
+  justify-content: flex-start; /* Align items to the start of the row */
+  width: 100%; /* Ensure it takes the full width */
+  margin-bottom: 100px;
+}
+
+.contact-header h1 {
+  margin: 0;
+}
+
+.rectangle {
+  width: 600px; /* Example width */
+  height: 30px; /* Example height */
+  background-color: #31bb93; /* Example color, change as needed */
+  margin-right: 10px; /* Space between the rectangle and the header text */
+}
+
+.contact-box {
+  width: 50%;
+  height: 100px;
+  background-color: #000;
+  margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #31bb93;
+  border-radius: 50px 0 0 50px; /* Rounded on one side */
+  opacity: 0;
+  padding: 10px 0;
+  transform: translateX(100%);
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.contact-box.left {
+  transform: translateX(-100%);
+  border-radius: 0 50px 50px 0; /* Rounded on the right side */
+  margin-right: 1000px;
+}
+
+.contact-box.visible {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.contact-box.right {
+  margin-left: 1000px;
+}
+
+.contact-box p, .contact-box a {
+  margin: 0;
+  color: #31bb93;
+  text-decoration: none;
+}
+
+.contact-box a:hover {
+  text-decoration: underline;
+}
+
+/* Mobile Styles */
+
+@media (max-width: 768px) {
+  .contact-header {
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+
+  .rectangle {
+    width: 60%; /* Adjust width for mobile */
+    height: 20px; /* Adjust height for mobile */
+    margin-right: 10px; /* Adjust spacing */
+  }
+
+  .contact-header h1 {
+    font-size: 24px; /* Adjust font size for mobile */
+    margin: 0; /* Remove any extra margin */
+    white-space: nowrap; /* Prevent text wrapping */
+  }
+
+  .contact-box {
+    width: 80%; /* Full width on mobile */
+    margin: 10px 0; /* Adjust margin for mobile */
+    border-radius: 20px; /* Fully rounded corners */
+    transform: translateX(0); /* Reset transform for mobile */
+  }
+
+  .contact-box.left {
+    margin-right: 0; /* Reset margin for mobile */
+    animation: slideInFromLeft 0.5s ease-in-out forwards;
+  }
+
+  .contact-box.right {
+    margin-left: 0; /* Reset margin for mobile */
+    animation: slideInFromRight 0.5s ease-in-out forwards;
+  }
+
+  .contact-box p, .contact-box a {
+    font-size: 14px; /* Adjust font size for mobile */
+    text-align: center; /* Center text on mobile */
+  }
+
+  .icon {
+    font-size: 20px; /* Adjust icon size for mobile */
+    margin-right: 10px; /* Space between icon and text */
+  }
+}
+
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

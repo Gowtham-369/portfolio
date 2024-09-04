@@ -1,0 +1,157 @@
+.project-page {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  gap: 20px;
+}
+
+.project-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-bottom: 100px;
+}
+
+.rectangle {
+  width: 500px; 
+  height: 10px; 
+  background-color: #31bb93;
+  margin-right: 10px;
+}
+
+.project-header h1 {
+  margin: 0;
+}
+
+.project-content {
+  display: flex; 
+  flex: 1; 
+}
+
+.project-list, .project-detail {
+  flex: 1;
+}
+
+.project-detail {
+  cursor: url('data:image/svg+xml;utf8,<svg height="100" width="100" xmlns="http://www.w3.org/2000/svg"><defs><radialGradient id="grad1" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:rgb(0,0,0);stop-opacity:0.3" /><stop offset="100%" style="stop-color:rgb(255,255,255);stop-opacity:0.5" /></radialGradient></defs><circle cx="30" cy="30" r="30" fill="url(%23grad1)" /></svg>'), auto;
+}
+
+.project-box {
+  background-color: black;
+  border: 2px solid #31bb93;
+  border-radius: 20px;
+  color: white;
+  margin: 10px;
+  padding: 20px;
+  width: 600px;
+  box-shadow: 0 0 20px rgba(49, 187, 147, 0.5); 
+  cursor: pointer;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  transition: transform 0.3s;
+}
+
+.project-box:hover {
+  transform: scale(1.05) !important;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.detail-box {
+  background: linear-gradient(145deg, #000000, #31bb93);
+  color: white;
+  padding: 20px;
+  width: 700px;
+  border-radius: 20px;
+}
+
+.project-skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.project-skill {
+  background-color: #2a2a2a;
+  color: #31bb93;
+  padding: 5px 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  font-size: 0.8em;
+}
+
+/* Mobile Styles */
+
+@media (max-width: 768px) {
+  .project-page {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    gap: 10px;
+  }
+
+  .project-header {
+    flex-direction: row;
+    align-items: center;
+    
+    width: 100%;
+    padding: 0 10px; /* Add padding to ensure spacing within the screen */
+    margin-bottom: 20px;
+    margin-left: 20px;
+  }
+
+  .rectangle {
+    width: 70%; /* Adjust width for mobile */
+    height: 5px; /* Adjust height for mobile */
+    margin-right: 5px; /* Adjust spacing */
+  
+  }
+
+  .project-header h1 {
+    font-size: 24px; /* Adjust font size for mobile */
+    margin: 0; /* Remove any extra margin */
+    white-space: nowrap; /* Prevent text wrapping */
+  }
+
+  .project-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-list, .project-detail {
+    width: 100%;
+  }
+
+  .project-box {
+    width: 90%; /* Adjust width for mobile */
+    margin: 10px 0; /* Adjust margin for mobile */
+    padding: 15px; /* Adjust padding for mobile */
+  }
+
+  .detail-box {
+    width: 90%; /* Adjust width for mobile */
+    padding: 15px; /* Adjust padding for mobile */
+  }
+
+  .project-skill {
+    font-size: 0.7em; /* Adjust font size for mobile */
+    padding: 3px 7px; /* Adjust padding for mobile */
+  }
+}

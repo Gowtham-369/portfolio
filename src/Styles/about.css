@@ -1,0 +1,164 @@
+.about-container {
+  background-color: black;
+  color: white;
+  padding: 20px;
+  height: 100%; /* Increase the height of the about page */
+  margin: 0; /* Remove any default margin */
+}
+
+.about-title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  z-index: 2;
+}
+
+.rectangle {
+  width: 500px; /* Increase the width of the rectangular box */
+  height: 70px; /* Increase the height of the rectangular box */
+  background-color: #31bb93;
+  margin-right: 10px;
+}
+
+.about-content {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Center align content vertically */
+}
+
+.code-editor {
+  background-color: black;
+  border: 2px solid #31bb93; /* Outer outline */
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 0 20px rgba(49, 187, 147, 0.5); /* Fade effect */
+  width: 1000px; /* Adjust width of code editor */
+}
+.code-editor code {
+  white-space: pre-wrap;
+  line-height: 1.5;
+}
+
+
+pre {
+  margin: 0;
+}
+
+code {
+  color: #ddd;
+}
+
+.keyword {
+  color: #569cd6;
+}
+
+.variable {
+  color: #9cdcfe;
+}
+
+.bracket {
+  color: #d4d4d4;
+}
+
+.string {
+  color: #ce9178;
+}
+
+.skills-container {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skills {
+  display: flex;
+  justify-content: space-between;
+}
+
+.skill {
+  text-align: center;
+  margin: 0 100px;
+  margin-top: 30px;
+}
+
+.skill h3 {
+  margin-bottom: 10px;
+}
+
+.skill-box {
+  background-color: black;
+  border: 2px solid #31bb93;
+  border-radius: 5px;
+  padding: 50px;
+  box-shadow: 0 0 20px rgba(49, 187, 147, 0.5);
+  width: 200px;
+  height: 200px;
+  
+}
+
+.skill-box-container{
+ 
+  transform: translateY(50px); /* Start slightly below their final position */
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  will-change: opacity, transform; /* Optimizes the properties for animations */
+
+  cursor: url('data:image/svg+xml;utf8,<svg height="100" width="100" xmlns="http://www.w3.org/2000/svg"><defs><radialGradient id="grad1" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:rgb(0,0,0);stop-opacity:0.3" /><stop offset="100%" style="stop-color:rgb(255,255,255);stop-opacity:0.5" /></radialGradient></defs><circle cx="50" cy="50" r="50" fill="url(%23grad1)" /></svg>'), auto;
+}
+.skill-box-container.visible {
+  opacity: 1; /* Fully visible */
+  transform: translateY(0); /* Move to final position */
+}
+
+h2 {
+  color: #ffffff;
+}
+
+.about-content p {
+  margin-top: 20px; /* Add margin to separate the text from the rectangular box */
+  max-width: 800px;
+}
+
+/* Mobile Styles */
+
+@media (max-width: 768px) {
+  .skills {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Add gap between skill boxes */
+    margin: 0; /* Adjust margin for mobile */
+  }
+
+  .skill {
+    margin: 20px 0; /* Adjust margin for skill boxes on mobile */
+  }
+
+  .skill-box {
+    width: 150px; /* Adjust width for mobile */
+    height: 150px; /* Adjust height for mobile */
+    padding: 20px; /* Adjust padding for mobile */
+  }
+
+  .rectangle {
+    width: 300px; /* Adjust width for mobile */
+    height: 50px; /* Adjust height for mobile */
+  }
+
+  .about-title h1 {
+    font-size: 24px; /* Adjust font size for mobile */
+  }
+
+  .code-editor {
+    width: 90%; /* Adjust width for mobile */
+    padding: 10px; /* Adjust padding for mobile */
+  }
+
+  .skills-container {
+    width: 100%; /* Ensure skills container takes full width */
+  }
+
+  .about-content {
+    flex-direction: column; /* Stack content vertically on mobile */
+    padding: 10px; /* Adjust padding for mobile */
+  }
+}

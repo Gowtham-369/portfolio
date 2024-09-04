@@ -1,0 +1,106 @@
+/* Existing Styles */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* Ensures the navbar stays on top of other content */
+}
+
+.navbar-left .navbar-title {
+  color: #31bb93;
+  font-size: 20px;
+  cursor: pointer;
+  text-decoration: none;
+  animation: glow 1.5s ease-in-out infinite alternate;
+  margin-left: 200px;
+}
+
+@keyframes glow {
+  from {
+      text-shadow: 0 0 10px #31bb93, 0 0 20px #31bb93, 0 0 30px #31bb93, 0 0 40px #31bb93;
+  }
+  to {
+      text-shadow: 0 0 20px #31bb93, 0 0 30px #31bb93, 0 0 40px #31bb93, 0 0 50px #31bb93, 0 0 60px #31bb93;
+  }
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  margin-right: 50px;
+}
+
+.navbar-links {
+  display: flex;
+}
+
+.navbar-button {
+  background-color: #31bb93;
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 20px; /* Rounded corners */
+  padding: 10px 20px;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s; /* Smooth transition */
+  text-decoration: none; /* Remove underline from links */
+}
+
+.navbar-button:hover {
+  background-color: #1c7c5c; /* Change color on hover */
+}
+
+.hamburger {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/* Mobile Styles */
+
+@media (max-width: 768px) {
+  .navbar-left .navbar-title {
+      margin-left: 0;
+      font-size: 18px;
+  }
+
+  .navbar-right {
+      flex-direction: column;
+      align-items: flex-end;
+  }
+
+  .navbar-links {
+      display: none;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+      background-color: black;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      padding: 10px 0;
+  }
+
+  .navbar-links.active {
+      display: flex;
+  }
+
+  .navbar-button {
+      width: 340px;
+      text-align: left;
+      padding: 10px 10px;
+      margin: 5px 20px;
+  }
+
+  .hamburger {
+      display: block;
+      color: white;
+      margin-right: 50px;
+  }
+}

@@ -1,0 +1,113 @@
+.experience-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: black;
+  color: white;
+  gap: 20px;
+}
+
+.experience-header {
+  display: flex;
+  align-items: center; /* Center vertically */
+  justify-content: flex-start; /* Align items to the start of the row */
+  width: 100%; /* Ensure it takes the full width */
+  margin-bottom: 100px;
+}
+
+.rectangle {
+  width: 100px; /* Adjust size as needed */
+  height: 10px; /* Adjust size as needed */
+  background-color: #31bb93;
+  margin-right: 10px;
+}
+
+.experience-header h1 {
+  margin: 0;
+  white-space: nowrap; /* Prevent text wrapping */
+}
+
+.experience-block {
+  background: linear-gradient(145deg, black, #121212);
+  border-left: 5px solid #31bb93;
+  padding: 20px;
+  margin: 10px;
+  width: 80%;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  overflow: hidden;
+  position: relative;
+  margin-left: 200px;
+}
+
+.experience-block.active {
+  transform: scale(1.03);
+  border-left: 10px solid #31bb93;
+}
+
+.experience-description {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
+  font-size: 0.9em;
+  margin-top: 10px;
+}
+
+.experience-block:hover .experience-description,
+.experience-block.active .experience-description {
+  max-height: 100px; /* Adjust based on content */
+}
+
+h2, h4 {
+  transition: color 0.3s ease;
+}
+
+.experience-block:hover h2,
+.experience-block:hover h4 {
+  color: #31bb93;
+}
+
+@media (max-width: 768px) {
+  .experience-container {
+    align-items: center;
+    padding: 20px; /* Add padding for better spacing on mobile */
+  }
+
+  .experience-header {
+    flex-direction: row; /* Ensure elements are in a row */
+    align-items: center;
+    justify-content: space-between; /* Space out elements */
+    width: 100%;
+    margin-bottom: 50px;
+    padding: 0 10px; /* Add padding to ensure spacing within the screen */
+  }
+
+  .rectangle {
+    width: 70%; /* Adjust width for mobile */
+    height: 8px; /* Adjust size for mobile */
+    margin-right: 10px; /* Adjust spacing */
+  }
+
+  .experience-header h1 {
+    font-size: 24px; /* Adjust font size for mobile */
+    margin: 0; /* Remove any extra margin */
+    white-space: nowrap; /* Prevent text wrapping */
+  }
+
+  .experience-block {
+    width: 100%; /* Full width on mobile */
+    margin-left: 0; /* Remove left margin on mobile */
+    padding: 15px; /* Adjust padding for mobile */
+  }
+
+  .experience-block.active {
+    transform: none; /* Remove scale transform on mobile */
+    border-left: 5px solid #31bb93; /* Adjust border size for mobile */
+  }
+
+  .experience-description {
+    max-height: none; /* Remove max-height for mobile */
+  }
+}
