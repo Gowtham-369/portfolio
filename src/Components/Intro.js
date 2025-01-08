@@ -56,7 +56,7 @@ const Intro = () => {
             <a href="https://github.com/Gowtham-369" target="_blank" rel="noopener noreferrer">
               <FontAwesomeIcon icon={faGithub} className="icon" />
             </a>
-            <a href="https://drive.google.com/file/d/1hrliRuQ9ieObN-sxTN20-UgLB3ULK9ui/view?usp=sharing" target="_blank" rel="noopener noreferrer" download="GowthamReddy-Resume.pdf">
+            <a href="https://drive.google.com/file/d/1hrliRuQ9ieObN-sxTN20-UgLB3ULK9ui/view?usp=sharing" target="_blank" rel="noopener noreferrer" download="Gowtham-Resume.pdf">
               <FontAwesomeIcon icon={faFileDownload} className="icon" />
             </a>
           </div>
