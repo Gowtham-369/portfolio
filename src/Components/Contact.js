@@ -31,17 +31,17 @@ function Contact() {
       </div>
       <div className={`contact-box left ${isVisible[0] ? "visible" : ""}`}>
         <FontAwesomeIcon icon={faEnvelope} className="icon" />
-        <p>Email: gowthamreddyu@gmail.com</p>
+        <p>Email: gowthamru1010@gmail.com</p>
       </div>
       <div className={`contact-box right ${isVisible[1] ? "visible" : ""}`}>
         <FontAwesomeIcon icon={faPhone} className="icon" />
         <p>Phone: +1 513-353-8063</p>
-        
+
       </div>
       <div className={`contact-box left ${isVisible[2] ? "visible" : ""}`}>
         <FontAwesomeIcon icon={faGithub} className="icon" />
         <p>GitHub: <a href="https://github.com/Gowtham-369">Gowtham-369</a></p>
-        
+
       </div>
       <div className={`contact-box right ${isVisible[3] ? "visible" : ""}`}>
         <FontAwesomeIcon icon={faLinkedin} className="icon" />
